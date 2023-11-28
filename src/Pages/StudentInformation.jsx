@@ -1,209 +1,423 @@
+import { Icon } from '@iconify/react';
 import React from "react";
-import note from "../assets/note-02.svg";
 const StudentInformation = () => {
   const studentsData = [
-    { id: 1, Col1: "Student Name", Col2: "Imrul Kayes" },
-    { id: 2, Col1: "Student ID", Col2: "42557662665" },
-    { id: 3, Col1: "email", Col2: "mailton@gmail.com" },
-    { id: 4, Col1: "Phone Number", Col2: "+880 21224455788" },
-    { id: 5, Col1: "Program", Col2: "Bachelor" },
-    { id: 6, Col1: "Total GPA", Col2: "5.00" },
-    { id: 7, Col1: "IELTS", Col2: "8.5" },
-    { id: 8, Col1: "Application Round", Col2: "02" },
-    { id: 9, Col1: "Application", Col2: "Bachelor" },
-    { id: 10, Col1: "University Preferred", Col2: "Kyungsung University" },
-    { id: 11, Col1: "Sub Agent Student", Col2: "No" },
-    { id: 12, Col1: "Nid error", Col2: "Yes" },
+    {
+      id: 1,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+
+    },
+
+    {
+      id: 2,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 3,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 4,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 5,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 6,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 7,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 8,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+    {
+      id: 9,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 10,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 11,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
+
+    {
+      id: 12,
+      Name: "Imrul Kayes",
+      ExamName: "HSC",
+      examResult: "5.00 GPA",
+      ieltsResult: "8.5",
+      ApplicationRound: "02",
+      ApplicationType: "Bachelor",
+      SubAgentStudent: "Yes",
+      universityPreference: "Kyungsung university",
+      email:'abcde@gmail.com',
+      phone:"+880 111 222 333",
+      emergencyContactNumber:"+880 222 444 555",
+      majorPreference:"--",
+      bankStatement:"Yes",
+      referenceName:"Omar faruq",
+      educationalInstituteName:"Kyungsung university",
+      dateAndBirth:"29 april, 1997",
+      passportNumber:"5155586645",
+      postCode:"1216",
+      nidError:"No",
+      counsellorName:"abu said",
+    },
   ];
 
-  const ID = studentsData.map((studentData) => studentData.id);
-  console.log(ID);
-
-  let getClassName = null;
-  if (ID % 2 == 0) {
-    getClassName = FAFAFA;
-  }
-
-  if (ID % 2 !== 0) {
-    getClassName = 181818;
-  }
-  console.log(getClassName);
   return (
-    <>
+    <div className="w-[1060px]">
       <h1 className="text-[24px] font-semibold">Student Progress</h1>
+      {/* table start ; left side*/}
+      <div className="col-span-2 w-full">
+        <div className="flex flex-col">
+          <div>
+            <div className=" bg-white rounded-2xl p-3">
+              <h1 className="text-[18px] font-semibold py-3">
+                Student Information
+              </h1>
+              <div className="overflow-hidden rounded-2xl overflow-x-scroll ">
+                <table className="min-w-full ">
+                  <thead className="bg-white">
+                    <tr className="text-[14px] text-[#181818] font-semibold ">
+                      <td className="px-5 py-5">Name</td>
+                      <td className="px-4">Exam Name</td>
+                      <td className="px-4">Exam result</td>
+                      <td className="px-4">IELTS result</td>
+                      <td className="px-4">Application Round</td>
+                      <td className="px-4">Application Type</td>
+                      <td className="mx-24">Sub agent student</td>
+                      <td className="px-4">University Preference</td>
+                      <td className="px-4">Email</td>
+                      <td className="px-4">Phone number</td>
+                      <td className="px-4">Emergency Contact Number</td>
+                      <td className="px-4">Major preference</td>
+                      <td className="px-4">Bank Statement support</td>
+                      <td className="px-4">Reference name</td>
+                      <td className="px-4">Educational institute name</td>
+                      <td className="px-4">Date and birth</td>
+                      <td className="px-4">Passport number</td>
+                      <td className="px-4">Postal code</td>
+                      <td className="px-4">Nid error</td>
+                      <td className="px-4">Counsellor name</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {studentsData.map((data) => (
+                      <tr
+                        className={` transition duration-300 ease-in-out px-3 hover:bg-gray-50 border-b`}
+                      >
+                        <td className="text-sm text-[#181818] py-5   whitespace-nowrap font-semibold pl-4 pr-24">
+                          {data.Name}
+                        </td>
+                        <td className="flex gap-8 text-sm text-[#181818] py-5 whitespace-nowrap   font-semibold pl-4 pr-8">
+                          {data.ExamName} 
+                          <Icon icon="iconamoon:arrow-down-2-fill" width={16}/>
+                        </td>
 
-      <div className="grid lg:grid-cols-3 mt-5 gap-16">
-        {/* table start ; left side*/}
-        <div className="col-span-2 w-full">
-          <div class="flex flex-col">
-            <div>
-              <div class=" bg-white rounded-2xl p-3">
-                <h1 className="text-[18px] font-semibold py-3">
-                  Student Information
-                </h1>
-                <div class="overflow-hidden rounded-2xl">
-                  <table class="min-w-full ">
-                    <tbody>
-                      {studentsData.map((data) => (
-                        <tr
-                          class={`bg-[#FAFAFA] transition duration-300 ease-in-out hover:bg-gray-100`}
-                        >
-                          <td class="text-sm text-[#181818] px-6 py-4 whitespace-nowrap font-semibold">
-                            {data.Col1}
-                          </td>
-                          <td class="text-sm text-[#181818] px-6 py-4 whitespace-nowrap text-right font-semibold">
-                            {data.Col2}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                        <td className="text-sm text-[#181818] py-5  whitespace-nowrap   font-semibold  pl-4 pr-10">
+                          {data.examResult}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5 whitespace-nowrap   font-semibold  pl-4 pr-20">
+                          {data.ieltsResult}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5 whitespace-nowrap   font-semibold  pl-4 pr-32">
+                          {data.ApplicationRound}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5  whitespace-nowrap   font-semibold pl-4 pr-24">
+                          {data.ApplicationType}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5 pl-4 pr-24 whitespace-nowrap   font-semibold">
+                          {data.SubAgentStudent}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-12 whitespace-nowrap  font-semibold">
+                          {data.universityPreference}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-12 whitespace-nowrap  font-semibold">
+                          {data.email}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-12 whitespace-nowrap  font-semibold">
+                          {data.phone}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-24 whitespace-nowrap  font-semibold">
+                          {data.emergencyContactNumber}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-28 whitespace-nowrap  font-semibold">
+                          {data.majorPreference}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-40 whitespace-nowrap  font-semibold">
+                          {data.bankStatement}
+                        </td>
+                        
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-12 whitespace-nowrap  font-semibold">
+                          {data.referenceName}
+                        </td>
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-16 whitespace-nowrap  font-semibold">
+                          {data.educationalInstituteName}
+                        </td>
+
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-12 whitespace-nowrap  font-semibold">
+                          {data.dateAndBirth}
+                        </td>
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-16 whitespace-nowrap  font-semibold">
+                          {data.passportNumber}
+                        </td>
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-20 whitespace-nowrap  font-semibold">
+                          {data.postCode}
+                        </td>
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-16 whitespace-nowrap  font-semibold">
+                          {data.nidError}
+                        </td>
+                        <td className="text-sm text-[#181818] py-5   pl-4 pr-20 whitespace-nowrap  font-semibold">
+                          {data.counsellorName}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-        {/* table end ; left side*/}
-
-        {/* right side start */}
-        <div className="flex-col space-y-4">
-          <section class="flex justify-center bg-white rounded-2xl p-6">
-            <div class="w-full">
-              <h2 class="text-2xl text-[#181818] font-semibold mb-7">
-                Application Status
-              </h2>
-
-              <div class="w-full bg-[#EDF0F0] max-w-sm my-12 mx-auto rounded-lg overflow-hidden border border-[#EDF0F0]">
-                <div class="bg-[#0090A6] text-xs leading-none py-1 w-[20%]"></div>
-              </div>
-
-              <ul>
-                <li class="relative flex items-baseline gap-6 pb-5">
-                  <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-[#0090A6]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      class="bi bi-circle-fill fill-[#0090A6]"
-                      viewBox="0 0 16 16"
-                    >
-                      <circle cx="8" cy="8" r="8" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-sm text-[#181818] font-semibold">
-                      Application Received
-                    </p>
-                    <p class="mt-2 text-[#8E8E8E] text-sm">15 May, 2023</p>
-                  </div>
-                </li>
-                <li class="relative flex items-baseline gap-6 pb-5">
-                  <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      class="bi bi-circle-fill fill-gray-400 "
-                      viewBox="0 0 16 16"
-                    >
-                      <circle cx="8" cy="8" r="8" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-sm text-[#8E8E8E] ">
-                      Online application on process
-                    </p>
-                  </div>
-                </li>
-                <li class="relative flex items-baseline gap-6 pb-5">
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      class="bi bi-circle-fill fill-gray-400"
-                      viewBox="0 0 16 16"
-                    >
-                      <circle cx="8" cy="8" r="8" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-sm text-[#8E8E8E]">Agreement done</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* student document section start*/}
-          <section class="flex justify-center bg-white rounded-2xl p-6  ">
-            <div class="w-full">
-              <h2 class="text-2xl text-[#181818] font-semibold mb-7">
-                Student Documents
-              </h2>
-
-            <div className="h-[304px] overflow-y-scroll">
-
-            <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full ">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-             <div className="flex gap-2 bg-[#F7F7F7] rounded-lg py-[14px] px-3 w-full mt-3">
-              <img className="w-5 h-5" src={note} alt="" />
-              <p>Onboarding documents.pdf</p>
-             </div>
-
-            </div>
-
-             
-            </div>
-          </section>
-          {/* student document section end*/}
-        </div>
-        {/* right side end */}
       </div>
-    </>
+      {/* table end ; left side*/}
+    </div>
   );
 };
 

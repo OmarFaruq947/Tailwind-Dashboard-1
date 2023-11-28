@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+  font-family: "MyFont";
+}
 #sidebar {
   --tw-translate-x: -100%;
 }
@@ -98,5 +102,32 @@
 
   100% {
     opacity: 100%;
+  }
+}
+
+/* Scroll bar CSS style */
+::-webkit-scrollbar {
+  background-color: white;
+  height: 9px;
+  border: 1px solid #f3f4f5;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #dfe0e0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+/* menuRightSlider */
+.menuRightSlider {
+  animation: rightSlider 0.5s linear;
+}
+@keyframes rightSlider {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

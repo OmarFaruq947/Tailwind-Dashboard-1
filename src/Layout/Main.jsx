@@ -1,94 +1,24 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import Navbar from '../Pages/Navbar';
-import analytics from "../assets/analytics-01.svg";
+import { Icon } from "@iconify/react";
+import React from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import Navbar from "../Pages/Navbar";
 import logo from "../assets/csvlogo.svg";
-import dashboard from "../assets/dashboard-square-01.svg";
-import logout from "../assets/logout-03.svg";
-import setting from "../assets/setting-02.svg";
-import multiUser from "../assets/user-multiple.svg";
-import payment from "../assets/wallet-02.svg";
-
+import supportImg from "../assets/support.svg";
 const Main = () => {
-
-    return (
-        <>
-        
-        <div className="relative min-h-screen md:flex " data-dev-hint="container">
-        <input type="checkbox" id="menu-open" className="hidden" />
-        <label
-          htmlFor="menu-open"
-          className="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-red-900 text-gray-600 md:hidden "
-          data-dev-hint="floating action button"
-        >
-          <svg
-            className="h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </label>
-
-        {/* <header
-          className="bg-blue-600 text-gray-100 flex justify-between md:hidden "
-          data-dev-hint="mobile menu bar"
-        >
-          <a
-            href="#"
-            className="block p-4 text-white font-bold whitespace-nowrap truncate"
-          >
-            <img className="h-10" src={logo} alt="" />
-          </a>
-          <label
-            htmlFor="menu-open"
-            id="mobile-menu-button"
-            className="m-2 p-2 focus:outline-none  hover:bg-[#F5F5F5] rounded-md"
-          >
-            <svg
-              id="menu-open-icon"
-              className="h-6 w-6 transition duration-200 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-            <svg
-              id="menu-close-icon"
-              className="h-6 w-6 transition duration-200 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </label>
-        </header> */}
-
+  const location=useLocation()
+ 
+  const lavelHidden =()=>{
+    return
+  }
+  return (
+    <>
+      <div className="relative min-h-screen md:flex " data-dev-hint="container">
+      
         <aside
           id="sidebar"
-          className="bg-white border-r text-gray-900 md:w-[240px]  space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col  overflow-y-auto w-[30%] z-20"
-          data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"
+          className="bg-white border-r text-gray-900 lg:w-[246px] space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col  overflow-y-auto w-[50%] pl-[31px] pr-[7px] z-20 overflow-x-hidden"
+          
+          data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation "
         >
           <div className="flex items-center flex-col mt-6">
             <Link to="/" className=" top-8">
@@ -97,81 +27,149 @@ const Main = () => {
           </div>
 
           <div className="px-4 ">
-            <p className="text-[#8E8E8E] w-[92px] h-[17px] left-8 top-[140px] uppercase tracking-tighter text-[14px] font-bold">
+            <p className="text-[#8E8E8E] w-[92px] h-[17px] left-8 top-[140px] uppercase tracking-tighter text-[14px] font-semibold">
               Admin user
             </p>
           </div>
 
           <nav
             className="items-start gap-y-4 flex flex-col"
-            data-dev-hint="main navigation "
+            data-dev-hint="main navigation"
           >
             <Link
               to="/"
-              className="flex items-center space-x-2 w-full py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818]"
+              className={`flex items-center space-x-2 w-full py-2 px-4 transition duration-200 font-semibold group rounded-xl h-[54px] text-[18px] ${
+                location.pathname === "/"
+                  ? "bg-[#0090A6] text-white rounded-lg px-2 py-1 "
+                  : "text-[#181818]"
+              }`}
+              
             >
-              <img src={dashboard} alt="" />
+              <Icon
+                icon="radix-icons:dashboard"
+                className={`${
+                  location.pathname === "/"
+                    ? " text-white  "
+                    : "text-[#8E8E8E]"
+                }`}
+                width={22}
+              />
+
               <span>Dashboard</span>
             </Link>
 
             <Link
               to="/studentInformation"
-              className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818] w-full"
+              className={`flex items-center space-x-2 w-full py-2 px-4 transition duration-200 font-semibold group rounded-xl h-[54px] text-[18px] ${
+                location.pathname === "/studentInformation"
+                  ? "bg-[#0090A6] text-white rounded-lg px-2 py-1 "
+                  : "text-[#181818]"
+              }`}
+  
+              
             >
-              <img src={multiUser} alt="" />
+              <Icon
+                icon="mdi:user-multiple-outline"
+                className={`${
+                  location.pathname === "/studentInformation"
+                    ? " text-white  "
+                    : "text-[#8E8E8E]"
+                }`}
+                
+                width={22}
+              />
               <span>Student Info</span>
             </Link>
 
             <Link
               to="/analytics"
-              className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818] w-full"
+              className={`flex items-center space-x-2 w-full py-2 px-4 transition duration-200 font-semibold group rounded-xl h-[54px] text-[18px] ${
+                location.pathname === "/analytics"
+                  ? "bg-[#0090A6] text-white rounded-lg px-2 py-1 "
+                  : "text-[#181818]"
+              }`}
             >
-              <img src={analytics} alt="" />
+              <Icon
+                icon="majesticons:analytics-line"
+                className={`${
+                  location.pathname === "/analytics"
+                    ? " text-white  "
+                    : "text-[#8E8E8E]"
+                }`}
+                width={22}
+              />
               <span>Analytics</span>
             </Link>
 
             <Link
               to="/payment/status"
-              className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818] w-full"
+              className={`flex items-center space-x-2 w-full py-2 px-4 transition duration-200 font-semibold group rounded-xl h-[54px] text-[18px] ${
+                location.pathname === "/payment/status"
+                  ? "bg-[#0090A6] text-white rounded-lg px-2 py-1 "
+                  : "text-[#181818]"
+              }`}
             >
-              <img src={payment} alt="" />
+              <Icon
+                icon="system-uicons:wallet"
+                className={`${
+                  location.pathname === "/payment/status"
+                    ? " text-white  "
+                    : "text-[#8E8E8E]"
+                }`}
+                width={25}
+              />
               <span>Payment Status</span>
             </Link>
 
             <Link
               to="/settings"
-              className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818] w-full"
+              className={`flex items-center space-x-2 w-full py-2 px-4 transition duration-200 font-semibold group rounded-xl h-[54px] text-[18px] ${
+                location.pathname === "/settings"
+                  ? "bg-[#0090A6] text-white rounded-lg px-2 py-1 "
+                  : "text-[#181818]"
+              }`}
             >
-              <img src={setting} alt="" />
+              <Icon
+                icon="ep:setting"
+                className={`${
+                  location.pathname === "/settings"
+                    ? " text-white  "
+                    : "text-[#8E8E8E]"
+                }`}
+                width={22}
+              />
               <span>Settings</span>
             </Link>
-
-
           </nav>
 
-          <a
-              href="#"
-              className="flex items-center py-2 px-4 transition duration-200 hover:bg-[#F5F5F5] font-bold text-[#181818] w-full absolute bottom-2"
-            >
-              <img src={logout} alt="" />
-              <span>Log out</span>
-            </a>
-            
+          <div className="flex gap-2 items-center w-[200px] transition duration-200 font-semibold text-[#181818] text-[18px] hover:bg-[#0090A6] hover:text-white rounded-xl h-[54px] group absolute bottom-5 pl-[31px]">
+        
+            <Icon
+              icon="uiw:logout"
+              className="group-hover:text-[#ffffff] text-[#8E8E8E]"
+              width={22}
+            />
+            <span>Log out</span>
+         
+          </div>
         </aside>
 
-        <main id="content" className="flex-1">
+        <main id="content" className="flex-1 pb-10">
           <Navbar />
 
           <div className="max-w-7xl mx-auto bg-[#FAFBFC] p-5">
-           
             <Outlet />
-            
           </div>
         </main>
+        <div
+          className="absolute right-10 bottom-5 bg-[#0090A6] w-16 h-16 flex items-center justify-center rounded-full drop-shadow-lg cursor-pointer"
+          style={{ dropShadow: "(0px 8px 16px rgba(0, 144, 166, 0.32))" }}
+        >
+          <img src={supportImg} alt="" className="text-red-500 " />
+        </div>
       </div>
-          
-        </>
-    );
+    </>
+  );
 };
 
 export default Main;
